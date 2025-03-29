@@ -20,7 +20,7 @@ export class AddStudentComponent {
   saveStudent(){
     this.studentSerivce.saveStudents(this.addStudents.value).subscribe((result)=>{
       console.log(result); 
-      
+      // 
       
     })
     
