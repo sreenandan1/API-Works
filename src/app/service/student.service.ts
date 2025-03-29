@@ -1,23 +1,21 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class StudentService implements OnInit {
-
+export class StudentService  {
   url = 'http://localhost:3000/students';
+  constructor(private http:HttpClient){}
 
-  constructor(private http:HttpClient) { }
-
-  ngOnInit(): void {
-    
-  }
-
-  saveStudents(data:any){
-    console.log('data',data);
+ 
+  
+  savedItem(data:any){
+    console.log(data)
     return this.http.post(this.url,data)
-    
-
   }
+  allStudent(){
+    return this.http.get(this.url)
+  }
+
 }
