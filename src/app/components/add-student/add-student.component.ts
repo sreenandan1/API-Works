@@ -25,6 +25,7 @@ export class AddStudentComponent {
     })
 
     this.addStudent.reset();
+    window.alert('are you sure to save this student..!!!')
 
 
 

@@ -18,4 +18,15 @@ export class StudentService  {
     return this.http.get(this.url)
   }
 
+  deleteUser(id:any){
+    return this.http.delete(`${this.url}/${id}`)
+  }
+  getStudent(id:any){
+    return this.http.get(`${this.url}/${id}`)
+  }
+
+  updateSTudent(id:any,data:any){
+    return this.http.put(`${this.url}/${id}`,data)
+  }
+
 }

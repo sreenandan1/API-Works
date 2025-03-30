@@ -4,7 +4,8 @@
         <th scope="col">ID</th>
         <th scope="col">Name</th>
         <th scope="col">Email</th>
-        <th scope="col">P</th>
+        <th scope="col">Passowrd</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -13,6 +14,9 @@
         <td>{{student.name}}</td>
         <td> {{student.email}} </td>
         <td> {{student.password}} </td>
+        <td (click)="removeList(student.id)">Delete </td>
+        <td routerLink="/edit/{{student.id}}">edit </td>
+
       </tr>
      
     </tbody>

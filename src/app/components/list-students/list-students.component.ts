@@ -7,7 +7,7 @@ import { StudentService } from '../../service/student.service';
   styleUrl: './list-students.component.css'
 })
 export class ListStudentsComponent implements OnInit{
-studenttt:any = [{}]
+studenttt:any = []
 
 
   constructor(private studentService:StudentService){}
@@ -18,7 +18,14 @@ ngOnInit(): void {
     this.studentService.allStudent().subscribe((result)=>{
       console.log('machaneeee vannu',result);
      this.studenttt = result
+    })
+  }
 
+  removeList(sudentId:any){
+
+    this.studentService.deleteUser(sudentId).subscribe((remove)=>{
+      console.log(remove);
+      this.ngOnInit()
       
     })
   }

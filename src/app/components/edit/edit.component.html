@@ -1,0 +1,19 @@
+<div class="container mt-3 bg-danger">
+    <h1 class="text-white">update student</h1>
+    <form [formGroup]="editForm" (ngSubmit)="updateData()">
+        <div class="mb-3">
+            <label for="exampleInputname1" class="form-label text-white">change name</label>
+            <input type="text" class="form-control" id="exampleInputname1" formControlName="name">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label text-white">change email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label text-white">change Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
